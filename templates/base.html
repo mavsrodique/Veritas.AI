@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#0D0D0D" />
+    <meta name="color-scheme" content="dark" />
+    <title>
+      {% block title %}Look Within{% endblock %} | St. Thomas of Villanova
+    </title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body class="{% block body_class %}{% endblock %}">
+    <div class="stage" aria-hidden="true">
+      <div class="drape" data-par="-0.06"></div>
+      <div class="weave"></div>
+      <div class="grain"></div>
+      <div class="spotwrap" data-par="-0.03"><div class="spot"></div></div>
+      <div class="vignette"></div>
+      <div class="dust"></div>
+    </div>
+    <div class="veil" aria-hidden="true"></div>
+
+    <header class="top">
+      <a class="brand" href="{{ url_for('index') }}"
+        ><span class="ring"></span>Look Within</a
+      >
+      <nav class="dnav" aria-label="Exhibit">
+        {% for key, title, short, grp in stops[1:] %}
+        <a
+         href="{{ url_for(key) }}"
+          class="{{ 'last' if loop.last }}"
+          {% if loop.index0 == pos %}aria-current="page"{% endif %}
+         >
+          {{ short }}
+       </a>
+        >
+        {% endfor %}
+      </nav>
+      <button
+        class="burger"
+        id="burger"
+        aria-expanded="false"
+        aria-controls="menu"
+      >
+        <span>Menu</span><i></i>
+      </button>
+      <i class="prog"></i>
+    </header>
+
+    <div
+      class="menu"
+      id="menu"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Exhibit menu"
+      aria-hidden="true"
+    >
+      <div class="menu-head">
+        <span class="brand"><span class="ring"></span>Look Within</span>
+        <button class="burger" id="menu-close">
+          <span>Close</span><i></i>
+        </button>
+      </div>
+      {% set ns = namespace(g='') %}
+      <ol>
+        {% for key, title, short, grp in stops %} {% if grp != ns.g %}{% set
+        ns.g = grp %}
+        <li class="cap" data-i="{{ loop.index0 }}">{{ grp }}</li>
+        {% endif %}
+        <li data-i="{{ loop.index0 }}">
+         <a
+         href="{{ url_for(key) }}"
+          {% if loop.index0 == pos %}aria-current="page"{% endif %}
+>
+            ><i>{{ roman[loop.index0] }}</i>{{ title }}</a
+          >
+        </li>
+        {% endfor %}
+      </ol>
+      <p class="menu-foot">In interiore homine habitat veritas.</p>
+    </div>
+
+    <main>
+      {% block content %}{% endblock %} {% if nxt %}
+      <a class="door" href="{{ url_for(nxt) }}"
+        ><span
+          >{{ 'Enter' if pos == 0 else 'Continue to Room ' ~ roman[pos + 1]
+          }}</span
+        ><b>{{ titles[nxt] }}</b></a
+      >
+      {% endif %}
+      <footer class="foot">
+        <p>
+          A digital companion to the bulletin board.<br /><em
+            >In interiore homine habitat veritas.</em
+          >
+        </p>
+      </footer>
+    </main>
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+  </body>
+</html>

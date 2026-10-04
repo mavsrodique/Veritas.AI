@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}Look Within{% endblock %}
+{% block body_class %}home{% endblock %}
+{% block content %}
+<section class="threshold">
+  <a class="mirror" href="#vocab" aria-label="Step closer to the mirror">
+    <svg viewBox="0 0 300 340" aria-hidden="true">
+      <defs>
+        <radialGradient id="mg" cx="40%" cy="30%" r="80%"><stop offset="0" stop-color="#FBF3DC"/><stop offset=".6" stop-color="#E9D9B2"/><stop offset="1" stop-color="#B8996A"/></radialGradient>
+        <clipPath id="mclip"><ellipse cx="150" cy="172" rx="78" ry="100"/></clipPath>
+      </defs>
+      <circle class="ring-a" cx="150" cy="150" r="132" pathLength="100"/>
+      <circle class="ring-b" cx="150" cy="150" r="123"/>
+      <g class="mir">
+        <ellipse cx="150" cy="172" rx="86" ry="108" fill="#0D0D0D" stroke="#C8A24A" stroke-width="2"/>
+        <ellipse cx="150" cy="172" rx="78" ry="100" fill="url(#mg)"/>
+        <g clip-path="url(#mclip)"><rect class="sheen" x="40" y="60" width="30" height="230" fill="#fff"/></g>
+      </g>
+    </svg>
+  </a>
+  <h1 class="look"><span>Look</span><span>Within</span></h1>
+  <p class="board-title">St. Thomas of Villanova &middot; Model of Augustinian Interiority in the Age of Artificial Intelligence</p>
+  <span class="cue" aria-hidden="true"></span>
+</section>
+
+<section class="scene" id="vocab">
+  <h2 class="lit">Two vocabularies</h2>
+  <p class="lit">The board speaks in two kinds of words. One belongs to machines. The other belongs to people. Touch a pair to see how they differ.</p>
+  <ul class="pairs">
+    {% for m, h, g in [
+      ("Data", "Knowledge", "Data is raw material. Knowledge is what a mind makes of it."),
+      ("Information", "Understanding", "Information can be stored and sent. Understanding has to be reached."),
+      ("Algorithm", "Wisdom", "An algorithm follows steps. Wisdom knows when the steps are not enough."),
+      ("Process", "Discernment", "A process simply runs. Discernment weighs what is worth running."),
+      ("Generate", "Creation", "To generate is to produce. To create is to give something of yourself.")] %}
+    <li class="pair" data-index="{{ loop.index0 }}">
+      <button type="button" aria-expanded="false"><span class="m">{{ m }}</span><span class="t"></span><span class="h">{{ h }}</span></button>
+      <div class="gloss"><p><span>{{ g }}</span></p></div>
+    </li>
+    {% endfor %}
+  </ul>
+  <p class="statement lit">Between data and wisdom, someone has to choose to look within.</p>
+</section>
+
+<section class="scene">
+  <h2 class="lit">The rooms ahead</h2>
+  <p class="lit">Read them in order, like walking a gallery. Each one explains a part of the board. The last is a conversation, and it is optional.</p>
+  <ol class="floorplan">
+    {% for key, title, short, grp in stops[1:] %}
+    <li{% if loop.last %} class="last"{% endif %}><a href="{{ url_for(key) }}"><i>{{ roman[loop.index] }}</i><b>{{ title }}</b></a></li>
+    {% endfor %}
+  </ol>
+</section>
+{% endblock %}

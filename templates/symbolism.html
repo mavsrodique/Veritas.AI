@@ -1,0 +1,227 @@
+{% extends "base.html" %} {% block title %}The Symbols{% endblock %} {% block
+content %}
+<section class="scene head">
+  <p class="chap">Room IV</p>
+  <h1>The Symbols</h1>
+  <p class="lead">
+    Every symbol tells part of the story. Together they reveal the message of
+    the exhibit.
+  </p>
+</section>
+
+<section class="scene">
+  <p class="statement lit">
+    Symbols can express in a single image what pages of text struggle to
+    explain. Each symbol on this board connects St. Thomas of Villanova,
+    Augustinian spirituality, and the questions raised by Artificial
+    Intelligence.
+  </p>
+</section>
+
+<section class="scene sym">
+  <div class="plate gold">
+    <svg class="draw" viewBox="0 0 120 120">
+      <circle cx="60" cy="16" r="9" opacity=".6" />
+      <path
+        pathLength="100"
+        d="M60 104C34 84 24 68 24 54c0-12 9-20 19-20 7 0 13 4 17 11 4-7 10-11 17-11 10 0 19 8 19 20 0 14-10 30-36 50z"
+      />
+      <path class="drop" d="M60 58c-5 8-5 16 0 22 5-6 5-14 0-22z" />
+    </svg>
+  </div>
+
+  <h2>The Pelican</h2>
+
+  <div class="lit">
+    <p class="kicker">Caritas. Charity. Service. Self-giving love.</p>
+
+    <p class="run">
+      <b>Meaning.</b> In Christian tradition, the pelican became a symbol of
+      self-sacrificing love. Medieval Christians believed a pelican would feed
+      its young with its own blood in times of need. Whether legend or reality,
+      the image became a powerful symbol of charity and generosity.
+    </p>
+
+    <p class="run">
+      <b>Connection to St. Thomas.</b> Known as the “Father of the Poor,” St.
+      Thomas of Villanova devoted his life to serving those in need. The pelican
+      represents the Caritas that defined his ministry and legacy.
+    </p>
+  </div>
+</section>
+
+<section class="scene sym">
+  <div class="plate gold">
+    <svg viewBox="0 0 120 120">
+      <defs>
+        <clipPath id="mc">
+          <ellipse cx="60" cy="58" rx="24" ry="32" />
+        </clipPath>
+      </defs>
+
+      <circle cx="60" cy="58" r="48" opacity=".45" />
+      <ellipse cx="60" cy="58" rx="24" ry="32" />
+
+      <g clip-path="url(#mc)">
+        <rect
+          class="sheen2"
+          x="20"
+          y="20"
+          width="12"
+          height="80"
+          fill="#F5F1E8"
+          stroke="none"
+        />
+      </g>
+    </svg>
+  </div>
+
+  <h2>The Mirror</h2>
+
+  <div class="lit">
+    <p class="kicker">Veritas. Reflection. Self-awareness. Truth.</p>
+
+    <p class="run">
+      <b>Meaning.</b> A mirror reflects what is truly present. It cannot
+      flatter, exaggerate, or hide reality. It invites honesty and
+      self-awareness.
+    </p>
+
+    <p class="run">
+      <b>Connection to Augustinian Interiority.</b> St. Augustine taught that
+      truth is found by turning inward. The mirror represents Veritas through
+      reflection, self-examination, and conscience. In this exhibit, the final
+      subject being studied is the viewer.
+    </p>
+  </div>
+</section>
+
+<section class="scene sym">
+  <div class="plate gold flock">
+    <img
+      src="{{ url_for('static', filename='img/feather.png') }}"
+      alt="Brain and heart united as one symbol"
+      class="symbol-img"
+    />
+  </div>
+
+  <h2>The Feathers</h2>
+
+  <div class="lit">
+    <p class="kicker">Reflection. Transformation. Growth. Self-discovery.</p>
+
+    <p class="run">
+      <b>Meaning.</b> Feathers symbolize growth, movement, and transformation.
+      Like a person developing through reflection, they suggest a journey rather
+      than a destination.
+    </p>
+
+    <p class="run">
+      <b>Purpose.</b> The feathers on the physical bulletin board contain
+      questions for personal reflection. They invite visitors to begin their own
+      inward journey toward greater self-understanding.
+    </p>
+  </div>
+</section>
+
+<section class="scene sym">
+  <div class="plate gold">
+    <img
+      src="{{ url_for('static', filename='img/brain-heart.png') }}"
+      alt="Brain and heart united as one symbol"
+      class="symbol-img"
+    />
+  </div>
+
+  <h2>Brain and Heart</h2>
+
+  <div class="lit">
+    <p class="kicker">Intelligence and Compassion. Knowledge and Wisdom.</p>
+
+    <p class="run">
+      <b>Meaning.</b> The brain represents knowledge, learning, logic, and
+      innovation. The heart represents compassion, empathy, conscience, and
+      love.
+    </p>
+
+    <p class="run">
+      <b>Connection.</b> Artificial Intelligence may imitate reasoning, but it
+      does not possess conscience, compassion, or moral responsibility. Human
+      flourishing requires both intelligence and a heart. Knowledge tells us
+      what can be done. Wisdom helps us decide what should be done.
+    </p>
+  </div>
+</section>
+
+<section class="scene sym">
+  <div class="plate gold">
+    <img
+      src="{{ url_for('static', filename='img/gears.png') }}"
+      alt="Brain and heart united as one symbol"
+      class="symbol-img"
+    />
+  </div>
+
+  <h2>The Gears</h2>
+
+  <div class="lit">
+    <p class="kicker">Human Innovation. Technology. Creativity.</p>
+
+    <p class="run">
+      <b>Meaning.</b> Gears represent engineering, invention, creativity, and
+      the human ability to solve problems. Every machine begins with a human
+      idea.
+    </p>
+
+    <p class="run">
+      <b>The Tension.</b> Gears are precise and tireless, but they do not know
+      why they turn. Beside the mirror, they invite us to ask what progress is
+      for and who it should serve.
+    </p>
+  </div>
+</section>
+
+<section class="scene sym">
+  <div class="plate red">
+    <svg viewBox="0 0 120 120">
+      <rect x="38" y="38" width="44" height="44" rx="4" />
+      <path class="nd" style="--k: 0" d="M48 38v-12M60 38v-12M72 38v-12" />
+      <path class="nd" style="--k: 1" d="M48 82v12M60 82v12M72 82v12" />
+      <path class="nd" style="--k: 2" d="M38 48H26M38 60H26M38 72H26" />
+      <path class="nd" style="--k: 3" d="M82 48h12M82 60h12M82 72h12" />
+
+      <text
+        x="60"
+        y="68"
+        text-anchor="middle"
+        fill="currentColor"
+        stroke="none"
+        font-size="22"
+        font-family="Georgia,serif"
+      >
+        AI
+      </text>
+    </svg>
+  </div>
+
+  <h2>Artificial Intelligence</h2>
+
+  <div class="lit">
+    <p class="kicker">Innovation. Responsibility. Ethical Technology.</p>
+
+    <p class="run">
+      <b>Meaning.</b> Artificial Intelligence represents one of humanity's most
+      powerful technological achievements. It can generate content, assist with
+      research, recognize patterns, and support decision-making.
+    </p>
+
+    <p class="run">
+      <b>Connection.</b> AI is a tool, not a substitute for the human person.
+      The challenge of our time is not whether machines can become more human,
+      but whether humans will continue to cultivate Veritas, Caritas, and
+      responsible stewardship while using them.
+    </p>
+  </div>
+</section>
+
+{% endblock %}

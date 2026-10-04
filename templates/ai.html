@@ -1,0 +1,81 @@
+{% extends "base.html" %} {% block title %}Veritas AI{% endblock %} {% block
+body_class %}ai{% endblock %} {% block content %}
+<section class="chamber" id="chamber">
+  <header class="ch-head">
+    <svg class="seal" viewBox="0 0 120 140" aria-hidden="true">
+      <circle class="s1" cx="60" cy="60" r="54" />
+      <circle class="s2" cx="60" cy="60" r="49" />
+      <ellipse
+        cx="60"
+        cy="70"
+        rx="30"
+        ry="40"
+        fill="#E9D9B2"
+        stroke="#C8A24A"
+        stroke-width="2"
+      />
+      <ellipse
+        cx="50"
+        cy="55"
+        rx="9"
+        ry="20"
+        fill="#fff"
+        opacity=".35"
+        transform="rotate(18 50 55)"
+      />
+    </svg>
+    <p class="chap">Room VII &middot; Conversation</p>
+    <h1 class="vt">Veritas AI</h1>
+    <p class="sub">Seek Truth. Reflect Deeply.</p>
+  </header>
+
+  <div class="fold" id="fold">
+    <div>
+      <blockquote class="board-q">
+        If AI can answer almost anything, what questions must I still answer for
+        myself?<cite>The question on the board</cite>
+      </blockquote>
+      <p class="inv-title">Begin with an invitation</p>
+      <ul class="invites" id="suggest">
+        <li><button type="button">Who was St. Thomas of Villanova?</button></li>
+        <li><button type="button">What is Augustinian Interiority?</button></li>
+        <li><button type="button">Why is the mirror important?</button></li>
+        <li><button type="button">What does Caritas mean?</button></li>
+        <li>
+          <button type="button">How can technology help humanity?</button>
+        </li>
+        <li>
+          <button type="button">
+            How do wisdom and compassion work together?
+          </button>
+        </li>
+      </ul>
+      <p class="how">
+        Veritas speaks from the board's own writing. It can be mistaken, and it
+        will never tell you who to be. Ask slowly, then answer for yourself.
+      </p>
+    </div>
+  </div>
+
+  <div class="turns" id="log" aria-live="polite"></div>
+
+  <form class="inscribe" id="form" autocomplete="off">
+    <p class="status" id="status">Veritas is gathering itself...</p>
+    <div class="field">
+      <textarea
+        id="input"
+        rows="1"
+        maxlength="600"
+        placeholder="Ask Veritas, or write what you are wondering..."
+        aria-label="Your question"
+      ></textarea>
+      <button id="send" type="submit" aria-label="Ask">
+        <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+      </button>
+    </div>
+    <p class="fine">
+      Veritas can be mistaken. Trust your conscience over any machine.
+    </p>
+  </form>
+</section>
+{% endblock %}

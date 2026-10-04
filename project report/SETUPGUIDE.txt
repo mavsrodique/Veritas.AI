@@ -1,0 +1,124 @@
+=====================================================
+VERITAS AI QUICK SETUP
+=====================================================
+
+REQUIREMENTS
+
+Windows 10/11
+Internet Connection (First Setup)
+Python 3.14+
+Ollama
+8GB RAM Minimum
+16GB RAM Recommended
+10GB+ Free Storage
+
+=====================================================
+INSTALL PYTHON
+=====================================================
+
+winget install Python.Python.3.14
+
+Verify:
+
+python --version
+pip --version
+
+=====================================================
+INSTALL OLLAMA
+=====================================================
+
+winget install Ollama.Ollama
+
+Verify:
+
+ollama --version
+
+=====================================================
+DOWNLOAD AI MODEL
+=====================================================
+
+ollama pull qwen2.5:3b
+
+Verify:
+
+ollama list
+
+Test:
+
+ollama run qwen2.5:3b
+
+Exit:
+
+/bye
+
+=====================================================
+RUN PROJECT
+=====================================================
+
+cd D:\veritas
+
+python -m pip install -r requirements.txt
+
+python app.py
+
+=====================================================
+LOCAL ACCESS
+=====================================================
+
+http://localhost:5000
+
+=====================================================
+PHONE ACCESS
+=====================================================
+
+ipconfig
+
+Find IPv4 Address
+
+Example:
+
+192.168.137.1
+
+Phone URL:
+
+http://192.168.137.1:5000
+
+=====================================================
+HOTSPOT
+=====================================================
+
+Settings
+→ Network & Internet
+→ Mobile Hotspot
+→ Turn On
+
+=====================================================
+VERIFY BEFORE JUDGING
+=====================================================
+
+✓ Python Installed
+✓ Ollama Installed
+✓ qwen3:8b Installed
+✓ Dependencies Installed
+✓ Website Running
+✓ Hotspot Working
+✓ QR Code Working
+✓ AI Responding
+
+=====================================================
+EMERGENCY COMMANDS
+=====================================================
+
+python --version
+
+pip --version
+
+ollama --version
+
+ollama list
+
+ollama run qwen3:8b
+
+ipconfig
+
+python app.py

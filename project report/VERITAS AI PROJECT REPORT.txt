@@ -1,0 +1,282 @@
+VERITAS AI PROJECT
+Progress Report
+Date: October 3, 2026
+
+PROJECT
+St. Thomas of Villanova:
+Model of Augustinian Interiority in the Age of Artificial Intelligence
+
+==================================================
+CURRENT STATUS
+==================================================
+
+OVERALL PROGRESS: ~80-85%
+
+Core system is functional and demonstration-ready.
+
+==================================================
+COMPLETED
+==================================================
+
+[✓] Flask web application running
+
+[✓] Local AI integration through Ollama
+
+[✓] QR code generation working
+
+[✓] Mobile phone access working
+
+[✓] Website accessible through local network
+
+[✓] Veritas AI chat interface operational
+
+[✓] Exhibit-themed system prompt implemented
+
+[✓] Symbolism knowledge base started
+
+[✓] St. Thomas of Villanova exhibit content added
+
+[✓] AI restricted to exhibit-related topics
+
+[✓] AI prevented from revealing feather questions
+
+[✓] Multi-page website structure working
+
+[✓] Responsive mobile layout working
+
+[✓] Templates connected to Flask routes
+
+[✓] Ollama installation fixed
+
+[✓] PATH issues fixed
+
+[✓] Python dependencies installed
+
+==================================================
+ISSUES RESOLVED
+==================================================
+
+1. Ollama command not recognized
+STATUS: RESOLVED
+
+2. qrcode module missing
+STATUS: RESOLVED
+
+3. Flask startup errors
+STATUS: RESOLVED
+
+4. PAGES variable error
+STATUS: RESOLVED
+
+5. Template rendering failures
+STATUS: RESOLVED
+
+6. Internal server errors
+STATUS: RESOLVED
+
+7. QR generation issues
+STATUS: RESOLVED
+
+==================================================
+KNOWN ISSUES
+==================================================
+
+1. AI responses sometimes too slow
+
+CURRENT MODEL:
+gemma3:4b
+
+POSSIBLE SOLUTION:
+qwen2.5:3b
+
+PRIORITY:
+HIGH
+
+--------------------------------------------------
+
+2. AI occasionally hallucinates historical facts
+
+Examples found:
+- Incorrect birth/death dates
+- Incorrect university claims
+
+PRIORITY:
+HIGH
+
+--------------------------------------------------
+
+3. Responses sometimes sound like textbook paragraphs
+
+PRIORITY:
+MEDIUM
+
+==================================================
+FACT CHECKING NEEDED
+==================================================
+
+Verified Information:
+
+St. Thomas of Villanova
+- Born: 1488
+- Died: 1555
+- Spanish Augustinian friar
+- Archbishop of Valencia
+- Known as "Father of the Poor"
+
+Need AI retraining to consistently use:
+
+- 1488–1555
+- Charity and service
+- Augustinian values
+- Interiority
+- Reflection
+- Compassion
+- Wisdom
+
+==================================================
+KNOWLEDGE BASE TO ADD TOMORROW
+==================================================
+
+ST. THOMAS OF VILLANOVA
+
+- Birth and death dates
+- Early life
+- Augustinian Order
+- Archbishop of Valencia
+- Charity work
+- Educational contributions
+- "Father of the Poor"
+- Legacy
+
+--------------------------------------------------
+
+AUGUSTINIAN INTERIORITY
+
+- Definition
+- Self-reflection
+- Self-awareness
+- Search for truth
+- Personal growth
+- Human dignity
+
+--------------------------------------------------
+
+EXHIBIT SYMBOLISM
+
+Pelican
+Mirror
+Feathers
+Brain
+Gears
+Circuit patterns
+Look Within theme
+
+--------------------------------------------------
+
+AI AND HUMANITY
+
+- AI as tool
+- Human conscience
+- Human wisdom
+- Moral responsibility
+- Ethical technology
+- Responsible use of AI
+
+==================================================
+PROMPT IMPROVEMENTS PLANNED
+==================================================
+
+[ ] Shorter responses
+
+Target:
+Under 100 words by default
+
+--------------------------------------------------
+
+[ ] More conversational tone
+
+Avoid:
+Textbook style
+
+Prefer:
+Exhibit guide style
+
+--------------------------------------------------
+
+[ ] Stronger exhibit grounding
+
+Goal:
+Reduce hallucinations
+
+==================================================
+PERFORMANCE OPTIMIZATION PLANNED
+==================================================
+
+Current:
+gemma3:4b
+
+Test Tomorrow:
+qwen2.5:3b
+
+Possible Settings:
+
+MODEL = "qwen2.5:3b"
+
+MAX_HISTORY = 1
+
+temperature = 0.3
+
+num_predict = 80
+
+Expected Result:
+Faster responses with similar exhibit quality
+
+==================================================
+EXHIBIT EVALUATION
+==================================================
+
+Functionality:
+9/10
+
+Mobile Experience:
+9/10
+
+Visual Presentation:
+9/10
+
+AI Accuracy:
+7.5/10
+
+AI Speed:
+6.5/10
+
+Exhibit Relevance:
+9.5/10
+
+Overall:
+8.5/10
+
+==================================================
+NEXT SESSION OBJECTIVES
+==================================================
+
+1. Improve historical accuracy
+2. Expand knowledge base
+3. Test qwen2.5:3b
+4. Reduce response times
+5. Refine answer style
+6. Judge-proof common questions
+7. Final testing on mobile devices
+
+==================================================
+NOTES
+==================================================
+
+Major milestone achieved.
+
+Veritas AI is operational.
+
+The remaining work is refinement, optimization,
+fact-checking, and polish rather than core development.
+
+The exhibit can already be demonstrated successfully.
