@@ -1,0 +1,6 @@
+Ollama/
+__pycache__/
+*.pyc
+venv/
+.venv/
+qr.png

@@ -1,0 +1,50 @@
+{% extends "base.html" %} {% block title %}Reflect{% endblock %} {% block
+content %}
+<div class="wrap">
+  <header class="page-head">
+    <h1>Reflect</h1>
+    <p class="lead">
+      The feathers on the board hold these ten questions. Read them again here,
+      slowly, and take them home. Tap a card for a way into it.
+    </p>
+  </header>
+  <div class="feathers">
+    {% for q, hint in [ ("What values guide my decisions?", "Think of your last
+    hard decision. What did you protect, and what did you give up?"), ("What
+    kind of person do I want to become?", "Picture yourself in ten years. What
+    would your closest friend say about your character?"), ("How do I respond to
+    challenges?", "Recall a recent setback. Did you react first or reflect
+    first? What would you do differently?"), ("What am I grateful for today?",
+    "Name three small things from today, and the person behind each one."),
+    ("How can I better serve others?", "Look around for one person who needs
+    help. What is one thing you can do for them?"), ("How do my actions affect
+    people around me?", "Choose one conversation from today. How might the other
+    person have felt afterwards?"), ("What habits should I improve?", "Pick one
+    habit, such as phone use or putting things off. What is one small step for
+    this week?"), ("What does success mean to me?", "Is success being admired,
+    or being good? Write your own definition in one sentence."), ("How do I
+    practice kindness?", "Remember a time kindness was shown to you. How can you
+    pass it on this week?"), ("How can I continue growing as a person?", "What
+    is one thing you are still learning? Who or what can help you keep going?")]
+    %}
+    <article class="feather glow-card">
+      <button
+        class="f-head"
+        aria-expanded="false"
+        aria-controls="fb{{ loop.index }}"
+      >
+        <span class="quill"></span><span>{{ q }}</span
+        ><span class="chev"></span>
+      </button>
+      <div class="f-body" id="fb{{ loop.index }}">
+        <div><p>{{ hint }}</p></div>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+  <p class="center muted">
+    Want to think one through with someone?
+    <a href="{{ url_for('ai') }}">Veritas AI</a> is optional.
+  </p>
+</div>
+{% endblock %}

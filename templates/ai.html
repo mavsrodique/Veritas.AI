@@ -1,0 +1,44 @@
+{% extends "base.html" %} {% block title %}Veritas AI{% endblock %} {% block
+body_class %}ai{% endblock %} {% block content %}
+<div class="wrap narrow">
+  <header class="page-head">
+    <h1 class="veritas">VERITAS AI</h1>
+    <p class="lead">Seek Truth. Reflect Deeply.</p>
+    <p class="muted small">
+      An interactive feature designed to help visitors explore themes of truth,
+      reflection, wisdom, technology, and Augustinian Interiority.
+    </p>
+  </header>
+  <section class="chat" aria-label="Veritas AI conversation">
+    <div class="status" id="status">Checking if Veritas is awake...</div>
+    <div class="log" id="log" aria-live="polite">
+      <div class="msg bot">
+        <p>
+          Welcome. Ask me about St. Thomas of Villanova, interiority, truth, or
+          how people and AI can live well together. I am a companion for your
+          thinking, not a substitute for it.
+        </p>
+      </div>
+    </div>
+    <div class="suggest" id="suggest">
+      <button type="button">What does "look within" mean?</button>
+      <button type="button">Why did St. Thomas give away his bed?</button>
+      <button type="button">Can AI have a conscience?</button>
+    </div>
+    <form id="form" autocomplete="off">
+      <textarea
+        id="input"
+        rows="1"
+        maxlength="600"
+        placeholder="Write a question or a thought..."
+        aria-label="Your message"
+      ></textarea>
+      <button class="btn" id="send" type="submit">Send</button>
+    </form>
+  </section>
+  <p class="muted center small">
+    Veritas can make mistakes. Check important facts, and trust your own
+    conscience over any machine.
+  </p>
+</div>
+{% endblock %}

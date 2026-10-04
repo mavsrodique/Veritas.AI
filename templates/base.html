@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0D0D0D">
+    <meta name="color-scheme" content="dark">
+
+    <title>{% block title %}Look Within{% endblock %} | St. Thomas of Villanova</title>
+
+    <script>
+        document.documentElement.className += " js";
+    </script>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="{% block body_class %}{% endblock %}">
+
+    <div class="bg" aria-hidden="true">
+        <div class="glow" data-parallax="-0.05"></div>
+        <div class="circuit"></div>
+        <div class="pulses">
+            <i></i>
+            <i></i>
+            <i></i>
+        </div>
+        <div class="particles"></div>
+    </div>
+
+    {% set ep = request.endpoint %}
+
+    <header class="top">
+        <a class="brand" href="{{ url_for('index') }}">
+            <span class="brand-ring"></span>
+            Look Within
+        </a>
+
+        <nav class="dnav" aria-label="Main">
+
+            <a href="{{ url_for('about') }}"
+               {% if ep == "about" %}aria-current="page"{% endif %}>
+               The Project
+            </a>
+
+            <a href="{{ url_for('thomas') }}"
+               {% if ep == "thomas" %}aria-current="page"{% endif %}>
+               St. Thomas
+            </a>
+
+            <a href="{{ url_for('interiority') }}"
+               {% if ep == "interiority" %}aria-current="page"{% endif %}>
+               Interiority
+            </a>
+
+            <a href="{{ url_for('symbolism') }}"
+               {% if ep == "symbolism" %}aria-current="page"{% endif %}>
+               Symbols
+            </a>
+
+            <a href="{{ url_for('reflections') }}"
+               {% if ep == "reflections" %}aria-current="page"{% endif %}>
+               Reflect
+            </a>
+
+            <a href="{{ url_for('ai') }}"
+               {% if ep == "ai" %}aria-current="page"{% endif %}>
+               Veritas AI
+            </a>
+
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+
+        <footer class="foot">
+            <p>
+                A digital companion to the bulletin board.<br>
+                <em>In interiore homine habitat veritas.</em>
+            </p>
+        </footer>
+    </main>
+
+    <nav class="tabbar" aria-label="Main">
+
+        <a href="{{ url_for('index') }}"
+           {% if ep == "index" %}aria-current="page"{% endif %}>
+            <span>Home</span>
+        </a>
+
+        <a href="{{ url_for('symbolism') }}"
+           {% if ep == "symbolism" %}aria-current="page"{% endif %}>
+            <span>Symbols</span>
+        </a>
+
+        <a href="{{ url_for('reflections') }}"
+           {% if ep == "reflections" %}aria-current="page"{% endif %}>
+            <span>Reflect</span>
+        </a>
+
+        <a href="{{ url_for('ai') }}"
+           {% if ep == "ai" %}aria-current="page"{% endif %}>
+            <span>Veritas</span>
+        </a>
+
+        <button
+            id="more"
+            aria-expanded="false"
+            aria-controls="sheet"
+            {% if ep in ['about', 'thomas', 'interiority'] %}
+            aria-current="true"
+            {% endif %}>
+            <span>More</span>
+        </button>
+
+    </nav>
+
+    <div class="scrim" id="scrim"></div>
+
+    <div class="sheet" id="sheet" role="dialog" aria-label="More pages">
+
+        <a href="{{ url_for('about') }}">
+            <b>The Project</b>
+            <span>Why this board exists</span>
+        </a>
+
+        <a href="{{ url_for('thomas') }}">
+            <b>St. Thomas of Villanova</b>
+            <span>The father of the poor</span>
+        </a>
+
+        <a href="{{ url_for('interiority') }}">
+            <b>Augustinian Interiority</b>
+            <span>The art of looking within</span>
+        </a>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+
+</body>
+</html>

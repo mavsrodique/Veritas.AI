@@ -1,0 +1,50 @@
+{% extends "base.html" %} {% block title %}The Project{% endblock %} {% block
+content %}
+<article class="wrap prose">
+  <header class="page-head">
+    <h1>The Project</h1>
+    <p class="lead">
+      A bulletin board about the oldest question: who am I, really?
+    </p>
+  </header>
+
+  <h2>Purpose</h2>
+  <p>
+    This board pairs a 16th-century Augustinian saint with a 21st-century
+    technology. St. Thomas of Villanova lived a life of inner honesty that
+    turned into generous action. Today we carry machines that can answer almost
+    any question. The board asks what remains for us to do ourselves.
+  </p>
+
+  <h2>Why the theme matters</h2>
+  <p>
+    Saint Augustine taught that truth is found by turning inward, not only by
+    looking outward. St. Thomas of Villanova, an Augustinian friar and
+    archbishop, lived that teaching: he examined himself, then spent himself for
+    the poor. His life shows that interiority is not escape from the world. It
+    is where good action begins.
+  </p>
+
+  <h2>Why Artificial Intelligence is relevant today</h2>
+  <p>
+    AI now writes, summarizes, translates, recommends and decides alongside us,
+    including in schools. It is powerful and useful. It also invites us to
+    outsource thinking, and with it the habit of reflection. Students are the
+    first generation to grow up beside it, so the question of how to use it well
+    belongs to them.
+  </p>
+
+  <h2>Why interiority remains important</h2>
+  <p>
+    An AI can produce words about kindness. It cannot be grateful, repent, or
+    choose to serve someone at a cost to itself. Conscience, gratitude, humility
+    and love are formed in the person, in quiet. Technology can support that
+    work. It cannot replace it.
+  </p>
+
+  <aside class="callout">
+    <p>The board's claim in one line: use the tool, but keep the inner life.</p>
+  </aside>
+  <p><a class="btn" href="{{ url_for('thomas') }}">Meet St. Thomas</a></p>
+</article>
+{% endblock %}

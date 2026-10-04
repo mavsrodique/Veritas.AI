@@ -1,0 +1,136 @@
+{% extends "base.html" %} {% block body_class %}home{% endblock %} {% block
+content %}
+<section class="entrance">
+  <div class="entrance-text">
+    <p class="whisper">You have just scanned the board. Now step inside it.</p>
+    <h1>
+      St. Thomas of Villanova:
+      <span
+        >Model of Augustinian Interiority in the Age of Artificial
+        Intelligence</span
+      >
+    </h1>
+    <p class="tagline">Look Within.</p>
+    <p class="lead">
+      A pelican gives of itself. A mirror asks for honesty. Feathers hold
+      questions. Gears hum with a new kind of intelligence. This companion walks
+      you through each piece of the board and what it says about being human
+      today.
+    </p>
+    <a class="btn" href="{{ url_for('about') }}">Begin the exhibit</a>
+  </div>
+  <div
+    class="halo"
+    data-parallax="0.1"
+    role="img"
+    aria-label="A golden halo around a mirror, ringed by gear teeth and circuit nodes"
+  >
+    <svg viewBox="0 0 400 400">
+      <g class="gear-ring">
+        <circle
+          cx="200"
+          cy="200"
+          r="178"
+          fill="none"
+          stroke="#B22222"
+          stroke-width="14"
+          stroke-dasharray="10 9"
+          opacity=".8"
+        />
+      </g>
+      <circle
+        cx="200"
+        cy="200"
+        r="158"
+        fill="none"
+        stroke="#D4AF37"
+        stroke-width="2"
+      />
+      <circle
+        cx="200"
+        cy="200"
+        r="148"
+        fill="none"
+        stroke="#B8860B"
+        stroke-width="1"
+        stroke-dasharray="2 6"
+      />
+      <g stroke="#B22222" stroke-width="1.2" fill="none" opacity=".7">
+        <path d="M200 22V0M378 200H400M200 378V400M22 200H0" />
+      </g>
+      <circle
+        cx="200"
+        cy="200"
+        r="104"
+        fill="#120808"
+        stroke="#D4AF37"
+        stroke-width="3"
+      />
+      <ellipse
+        cx="170"
+        cy="165"
+        rx="34"
+        ry="62"
+        fill="#F5F5DC"
+        opacity=".08"
+        transform="rotate(30 170 165)"
+      />
+      <path
+        d="M200 255c-30-22-46-38-46-58 0-14 10-24 22-24 10 0 19 6 24 15 5-9 14-15 24-15 12 0 22 10 22 24 0 20-16 36-46 58z"
+        fill="none"
+        stroke="#D4AF37"
+        stroke-width="2"
+      />
+      <g fill="#D4AF37">
+        <circle cx="200" cy="42" r="5" />
+        <circle cx="358" cy="200" r="5" />
+        <circle cx="200" cy="358" r="5" />
+        <circle cx="42" cy="200" r="5" />
+      </g>
+    </svg>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>A path through the exhibit</h2>
+  <p class="muted">
+    Follow the stations in order, or wander. Veritas AI waits at the end, only
+    if you want it.
+  </p>
+  <ol class="stations">
+    <li>
+      <a class="glow-card" href="{{ url_for('about') }}"
+        ><b>The Project</b
+        ><span>Why this board exists and why it matters now.</span></a
+      >
+    </li>
+    <li>
+      <a class="glow-card" href="{{ url_for('thomas') }}"
+        ><b>St. Thomas of Villanova</b
+        ><span>The archbishop who gave away his bed.</span></a
+      >
+    </li>
+    <li>
+      <a class="glow-card" href="{{ url_for('interiority') }}"
+        ><b>Augustinian Interiority</b
+        ><span>The old art of looking within.</span></a
+      >
+    </li>
+    <li>
+      <a class="glow-card" href="{{ url_for('symbolism') }}"
+        ><b>The Symbols</b><span>Pelican, mirror, feathers, gears, AI.</span></a
+      >
+    </li>
+    <li>
+      <a class="glow-card" href="{{ url_for('reflections') }}"
+        ><b>Reflect</b><span>Ten questions from the board's feathers.</span></a
+      >
+    </li>
+    <li class="quiet">
+      <a class="glow-card" href="{{ url_for('ai') }}"
+        ><b>Veritas AI</b><span>An optional conversation partner.</span></a
+      >
+    </li>
+  </ol>
+</section>
+{% endblock %}
