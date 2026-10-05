@@ -44,7 +44,7 @@
 
 <section class="scene">
   <h2 class="lit">The rooms ahead</h2>
-  <p class="lit">Read them in order, like walking a gallery. Each one explains a part of the board. The last is a conversation, and it is optional.</p>
+  <p class="lit">Read them in order, like walking a gallery. Each one explains a part of the board. The last is a conversation with Veritas, our AI companion, and it is optional.</p>
   <ol class="floorplan">
     {% for key, title, short, grp in stops[1:] %}
     <li{% if loop.last %} class="last"{% endif %}><a href="{{ url_for(key) }}"><i>{{ roman[loop.index] }}</i><b>{{ title }}</b></a></li>
